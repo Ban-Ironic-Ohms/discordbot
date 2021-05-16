@@ -45,6 +45,12 @@ class MyClient(discord.Client):
             await message.reply("The total dislike of the new Discord is {}".format(current_count), mention_author=True)
             print(message.content)
 
+        elif message.content.startswith('hack the mainframe'):
+            if str(message.author) == "Micah#2740":
+                await send("Access granted, hacking now")
+            else:
+                await send("You are not worthy")
+
 client = MyClient()
 
 keyfile = open("/home/pi/Desktop/DiscordBot/key.txt", "r")
