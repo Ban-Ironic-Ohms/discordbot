@@ -47,9 +47,9 @@ class MyClient(discord.Client):
 
         elif message.content.startswith('hack the mainframe'):
             if str(message.author) == "Micah#2740":
-                await client.send("Access granted, hacking now")
+                await message.reply("Access granted, hacking now")
             else:
-                await client.send("You are not worthy")
+                await message.reply("You are not worthy")
 
 client = MyClient()
 
