@@ -1,5 +1,6 @@
 import discord
 from discord.ext import commands
+from chatterbot import ChatBot
 
 
 class MyClient(discord.Client):
@@ -50,6 +51,10 @@ class MyClient(discord.Client):
                 await message.reply("Access granted, hacking now")
             else:
                 await message.reply("You are not worthy")
+
+        elif message.content.startswith("\u203Dreplier"):
+            reply = input("reply: ")
+            await message.reply(reply)
 
 client = MyClient()
 
