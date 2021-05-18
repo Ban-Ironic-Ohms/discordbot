@@ -19,6 +19,10 @@ class MyClient(discord.Client):
             else:
                 await message.reply("I'm afraid I can't do that, Dave")
 
+        elif message.content.startswith("\u203Dreplier"):
+            reply = input("reply: ")
+            await message.reply(reply)
+            
         elif message.content.startswith('\u203Doff'):
             await message.reply("Wrong")
 
@@ -52,9 +56,7 @@ class MyClient(discord.Client):
             else:
                 await message.reply("You are not worthy")
 
-        elif message.content.startswith("\u203Dreplier"):
-            reply = input("reply: ")
-            await message.reply(reply)
+
 
 client = MyClient()
 
