@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands
-from chatterbot import ChatBot
+
 
 
 class MyClient(discord.Client):
