@@ -21,10 +21,8 @@ class MyClient(discord.Client):
 
             return_message_lines = return_message.splitlines()
 
-            to_send = (', '.join(return_message[1:3]))
-
-            print(to_send)
-            await message.reply(to_send)
+            print(return_message)
+            await message.reply(str(checkText(str(message.content))))
 
         if message.content.startswith('\u203Dreset'):
             if str(message.author) == "Micah#2740":
