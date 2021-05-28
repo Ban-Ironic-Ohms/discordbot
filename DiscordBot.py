@@ -9,7 +9,7 @@ class MyClient(discord.Client):
     async def on_message(self, message):
         print('Message from {0.author}: {0.content}'.format(message))
 
-        await message.reply(language_check(message))
+        await message.reply(CheckText(message))
 
         if message.content.startswith('\u203Dreset'):
             if str(message.author) == "Micah#2740":
