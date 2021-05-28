@@ -22,7 +22,7 @@ class MyClient(discord.Client):
             return_message_lines = return_message.splitlines()
 
             print(return_message)
-            await message.reply(str(checkText(str(message.content)))[1:3])
+            await message.reply(str(checkText(str(message.content))).splitlines()[1:3])
 
         if message.content.startswith('\u203Dreset'):
             if str(message.author) == "Micah#2740":
