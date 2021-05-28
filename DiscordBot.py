@@ -19,7 +19,7 @@ class MyClient(discord.Client):
             '''
             return_message = str(checkText(str(message.content))).splitlines()[1:3]
 
-            better_message = *return_message, sep=' '
+            better_message = *return_message, sep=', '
 
             print(better_message)
             await message.reply(better_message)
