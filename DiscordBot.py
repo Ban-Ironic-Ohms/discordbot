@@ -17,7 +17,7 @@ class MyClient(discord.Client):
             if n_o_errors != 0:
                 await message.reply(ret_message)
             '''
-            return_message = checkText(str(message.content))).splitlines()[1:3]
+            return_message = checkText(str(message.content)).splitlines()[1:3]
 
             better_message = *return_message, sep=', '
 
