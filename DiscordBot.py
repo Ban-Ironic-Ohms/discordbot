@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands
-from language.py import *
+from language import *
 
 class MyClient(discord.Client):
     async def on_ready(self):

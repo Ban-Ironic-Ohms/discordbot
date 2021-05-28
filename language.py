@@ -6,5 +6,3 @@ def CheckText(message):
     matches = tool.check(message)
     for mistake in matches:
         return mistake
-
-CheckText
