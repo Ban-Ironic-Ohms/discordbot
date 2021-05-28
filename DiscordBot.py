@@ -1,7 +1,6 @@
 import discord
 from discord.ext import commands
-
-
+from language.py import *
 
 class MyClient(discord.Client):
     async def on_ready(self):
@@ -9,6 +8,8 @@ class MyClient(discord.Client):
 
     async def on_message(self, message):
         print('Message from {0.author}: {0.content}'.format(message))
+
+        await message.reply(language_check(message))
 
         if message.content.startswith('\u203Dreset'):
             if str(message.author) == "Micah#2740":
