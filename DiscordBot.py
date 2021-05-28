@@ -9,7 +9,7 @@ class MyClient(discord.Client):
     async def on_message(self, message):
         print('Message from {0.author}: {0.content}'.format(message))
         
-        if not message.content.startswith("Message"):
+        if not message.content.startswith("Message") or message.content.startswith("Line"):
             '''
             n_o_errors = numberOfErrors(str(message.content))
             ret_message = ('There are', n_o_errors, 'grammatical or spelling errors in your message')
@@ -22,7 +22,7 @@ class MyClient(discord.Client):
             return_message_lines = return_message.splitlines()
 
             print(return_message)
-            await message.reply(str(checkText(str(message.content))))
+            await message.reply(str(checkText(str(message.content)))[1:3])
 
         if message.content.startswith('\u203Dreset'):
             if str(message.author) == "Micah#2740":
