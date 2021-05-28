@@ -23,6 +23,8 @@ class MyClient(discord.Client):
 
             to_send = str(return_message_lines[1:3])
 
+            to_send = (*to_send[1:3], sep=', ')
+
             print(to_send)
             await message.reply(to_send)
 
