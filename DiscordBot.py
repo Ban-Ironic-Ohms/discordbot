@@ -21,7 +21,9 @@ class MyClient(discord.Client):
 
             return_message_lines = return_message.splitlines()
 
-            print(return_message_lines)
+            to_send = return_message_lines[1][8:]
+
+            print(to_send)
             await message.reply(checkText(str(message.content)))
 
         if message.content.startswith('\u203Dreset'):
