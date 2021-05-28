@@ -10,6 +10,7 @@ class MyClient(discord.Client):
         print('Message from {0.author}: {0.content}'.format(message))
         
         if str(message.author != "Micah's Marvelous Discord Bot#3557"):
+            print(message.author)
             await message.reply(CheckText(str(message.content)))
 
         if message.content.startswith('\u203Dreset'):
