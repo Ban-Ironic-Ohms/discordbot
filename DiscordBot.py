@@ -21,7 +21,7 @@ class MyClient(discord.Client):
 
             return_message_lines = return_message.splitlines()
 
-            to_send = (', '.join(to_send[1:3]))
+            to_send = (', '.join(return_message[1:3]))
 
             print(to_send)
             await message.reply(to_send)
