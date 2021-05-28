@@ -18,7 +18,10 @@ class MyClient(discord.Client):
                 await message.reply(ret_message)
             '''
             return_message = checkText(str(message.content))
-            print(return_message)
+
+            return_message_lines = return_message.splitlines()
+
+            print(return_message_lines)
             await message.reply(checkText(str(message.content)))
 
         if message.content.startswith('\u203Dreset'):
