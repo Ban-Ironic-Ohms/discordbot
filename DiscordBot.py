@@ -11,7 +11,8 @@ class MyClient(discord.Client):
         
         if not message.content.startswith("Line"):
             n_o_errors = numberOfErrors(str(message.content))
-            await message.reply("There are", n_o_errors, "grammatical or spelling errors in your message.")
+            message = "There are", n_o_errors, "grammatical or spelling errors in your message."
+            await message.reply(message)
             #await message.reply(checkText(str(message.content)))
 
         if message.content.startswith('\u203Dreset'):
