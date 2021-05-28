@@ -9,7 +9,7 @@ class MyClient(discord.Client):
     async def on_message(self, message):
         print('Message from {0.author}: {0.content}'.format(message))
         
-        if not message.content.startswith("Line"):
+        if not message.content.startswith("Message"):
             '''
             n_o_errors = numberOfErrors(str(message.content))
             ret_message = ('There are', n_o_errors, 'grammatical or spelling errors in your message')
@@ -21,7 +21,7 @@ class MyClient(discord.Client):
 
             return_message_lines = return_message.splitlines()
 
-            to_send = return_message_lines[1:2]
+            to_send = str(return_message_lines[1:3])
 
             print(to_send)
             await message.reply(to_send)
