@@ -17,12 +17,12 @@ class MyClient(discord.Client):
             if n_o_errors != 0:
                 await message.reply(ret_message)
             '''
-            return_message = checkText(str(message.content)).splitlines()[1:3]
+            return_message = str(checkText(str(message.content))).splitlines()[1:3]
 
             better_message = *return_message, sep=', '
 
             print(better_message)
-            await message.reply(str(checkText(str(message.content))).splitlines()[1:3])
+            await message.reply(better_message)
 
         if message.content.startswith('\u203Dreset'):
             if str(message.author) == "Micah#2740":
