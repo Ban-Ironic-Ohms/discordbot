@@ -10,7 +10,8 @@ class MyClient(discord.Client):
         print('Message from {0.author}: {0.content}'.format(message))
         
         if not message.content.startswith("Line"):
-            await message.reply(CheckText(str(message.content)))
+            await message.reply(f"There are {numberOfErrors(str(message.content))} grammatical or spelling errors in your message.")
+            #await message.reply(checkText(str(message.content)))
 
         if message.content.startswith('\u203Dreset'):
             if str(message.author) == "Micah#2740":
