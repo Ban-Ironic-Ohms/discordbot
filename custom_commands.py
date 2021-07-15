@@ -46,7 +46,6 @@ async def timedPing(ctx, ping, time):
 
 
 
-
-
-
-client.run('ODYyNjAxNzIwODgxMjE3NTM2.YOaudA.7liGdUQZVqUKZaOTv_yZdVpyCFw')
+keyfile = open("./custom_commands_key.txt")
+logon_key = str(keyfile.read())
+client.run(logon_key)
